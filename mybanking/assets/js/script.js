@@ -1,4 +1,4 @@
-let myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText);
+var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText);
 
 function sendMoney(){
    var enterName = document.getElementById("enterName").value;
@@ -12,7 +12,7 @@ function sendMoney(){
          if(document.getElementById(findUserBankAccount) != null){
           
             var finalAmount = parseInt(document.getElementById(findUserBankAccount).innerHTML) + enterAmount;
-            var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - enterAmount
+            myAccountBalance -= enterAmount;
             document.getElementById("myAccountBalance").innerText = myAccountBalance
             document.getElementById(findUserBankAccount).innerHTML = finalAmount;
             alert(`Successful Transaction !!  
@@ -36,6 +36,35 @@ function sendMoney(){
 
       }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
